@@ -462,15 +462,27 @@
 
       <div style="flex: 1 1 360px; min-width: 300px; display: flex; flex-direction: column; gap: 14px;">
 
-        <div style="display: flex; align-items: flex-start; gap: 14px; background: var(--row); border: 1px solid var(--line); border-radius: 14px; padding: 18px;">
-          <span aria-hidden="true" style="display: flex; gap: 4px; margin-top: 6px; flex-shrink: 0;">
-            <span style="width: 10px; height: 10px; border-radius: 50%; background: var(--warn-allergy);"></span>
-            <span style="width: 10px; height: 10px; border-radius: 50%; background: var(--warn-interaction);"></span>
-            <span style="width: 10px; height: 10px; border-radius: 50%; background: var(--warn-duplicate);"></span>
-          </span>
+        <div style="display: flex; align-items: flex-start; gap: 14px; background: var(--row); border: 1px solid var(--line); border-radius: 14px; padding: 16px;">
+          <span aria-hidden="true" style="width: 14px; height: 14px; border-radius: 50%; background: var(--warn-allergy); margin-top: 4px; flex-shrink: 0;"></span>
           <div>
-            <div style="font-size: 15px; font-variation-settings: 'wght' 400;">Safety check</div>
-            <div style="font-size: 13px; color: var(--text-secondary); line-height: 1.6;">One combined check runs on every dose, covering allergy conflicts, drug interactions and duplicate medications — matched active ingredients, known-risk combinations down to minimum safe dose spacing, and the same medicine added twice under different brand names.</div>
+            <div style="font-size: 15px; font-variation-settings: 'wght' 400;">Allergy conflict</div>
+            <div style="font-size: 13px; color: var(--text-secondary); line-height: 1.5;">Flags a medication that matches — or shares an active ingredient with — a recorded allergy.</div>
+          </div>
+        </div>
+
+        <div style="display: flex; align-items: flex-start; gap: 14px; background: var(--row); border: 1px solid var(--line); border-radius: 14px; padding: 16px;">
+          <span aria-hidden="true" style="width: 14px; height: 14px; border-radius: 50%; background: var(--warn-interaction); margin-top: 4px; flex-shrink: 0;"></span>
+          <div>
+            <div style="font-size: 15px; font-variation-settings: 'wght' 400;">Drug interaction</div>
+            <div style="font-size: 13px; color: var(--text-secondary); line-height: 1.5;">Warns when two active medications are a known-risk combination, down to minimum safe dose spacing.</div>
+          </div>
+        </div>
+
+        <div style="display: flex; align-items: flex-start; gap: 14px; background: var(--row); border: 1px solid var(--line); border-radius: 14px; padding: 16px;">
+          <span aria-hidden="true" style="width: 14px; height: 14px; border-radius: 50%; background: var(--warn-duplicate); margin-top: 4px; flex-shrink: 0;"></span>
+          <div>
+            <div style="font-size: 15px; font-variation-settings: 'wght' 400;">Duplicate medication</div>
+            <div style="font-size: 13px; color: var(--text-secondary); line-height: 1.5;">Catches the same medicine, or drug class, added twice under two different brand names.</div>
           </div>
         </div>
 
