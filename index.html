@@ -95,6 +95,9 @@
   a { color: var(--accent); text-decoration: none; }
   a:hover { color: var(--cta); }
   ::selection { background: var(--accent-container); color: var(--text); }
+  /* Form controls don't inherit the page font by default in most browsers —
+     this makes every button/input/select on the page use GoogleSansFlex too. */
+  button, input, select, textarea { font-family: inherit; }
   @keyframes drift {
     0%   { transform: translate(0, 0); }
     50%  { transform: translate(18px, -24px); }
@@ -783,7 +786,7 @@
     <form style="flex: 1 1 360px; display: flex; gap: 10px; flex-wrap: wrap;" aria-label="Join the cura waitlist">
       <label for="email" style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0);">Email address</label>
       <input id="email" type="email" placeholder="you@example.com" style="flex: 1 1 220px; min-width: 0; height: 50px; border-radius: 12px; border: 1px solid var(--line); background: var(--row); color: var(--text); font-size: 15px; padding: 0 16px; box-sizing: border-box;">
-      <button type="submit" style="height: 50px; padding: 0 24px; border-radius: 12px; border: none; background: var(--cta); color: var(--on-cta); font-size: 15px; font-family: 'GoogleSansFlex', system-ui, sans-serif; font-variation-settings: 'wght' 400; cursor: pointer; flex-shrink: 0;">Notify me</button>
+      <button type="submit" style="height: 50px; padding: 0 24px; border-radius: 12px; border: none; background: var(--cta); color: var(--on-cta); font-size: 15px; font-variation-settings: 'wght' 400; cursor: pointer; flex-shrink: 0;">Notify me</button>
     </form>
   </section>
   </main>
