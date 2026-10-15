@@ -50,14 +50,19 @@
   /* cura's real light-mode palette, pulled from lib/theme/cura_palette.dart —
      toggled by setting data-theme="light" on <html> from the theme switch. */
   html[data-theme="light"] {
-    --canvas: #C5CEE3;
-    --card: rgba(241,245,251,0.86);
-    --row: rgba(230,235,245,0.82);
-    --line: #C3CBE0;
+    /* 🩹 Website-only softening pass (contrast turned down from cura's real
+       cura_palette.dart values above) — canvas/card/row/line/panel tones
+       darkened a notch so the marketing page doesn't read as stark white.
+       The app's actual in-app palette is untouched; these values are for
+       this website only and are no longer a 1:1 mirror of cura_palette.dart. */
+    --canvas: #B9C3DA;
+    --card: rgba(226,231,241,0.86);
+    --row: rgba(213,219,233,0.82);
+    --line: #AEB7CE;
     --text: #14171F;
     --text-secondary: #4B5162;
     --accent: #1B4FB0;
-    --accent-container: #DCE7FC;
+    --accent-container: #CBD8F0;
     --taken: #3F6B52;
     --missed: #A3574E;
     --warn-allergy: #B3261E;
@@ -71,17 +76,17 @@
     --glow-blue: #4682E6;
     --glow-teal: #4696BE;
     --self-ring: #B0206E;
-    --panel-top: #EEF2F9;
-    --topbar-bg: #F3F6FB;
-    --badge-ink: #F3F6FB;
-    --cta-band-end: #E6EBF6;
+    --panel-top: #DCE2EE;
+    --topbar-bg: #E1E6F0;
+    --badge-ink: #E1E6F0;
+    --cta-band-end: #D5DBEA;
     --panel-dot: rgba(20,23,31,0.08);
     --taken-tint: rgba(63,107,82,0.14);
-    --nav-bg: rgba(220,226,240,0.72);
+    --nav-bg: rgba(206,213,229,0.72);
     --logo-filter: brightness(0) saturate(100%);
-    --review-card: rgba(199,208,228,0.75);
+    --review-card: rgba(190,199,219,0.75);
     --hero-panel-glow: radial-gradient(ellipse 70% 50% at 20% 10%, rgba(120,110,230,0.26), transparent 60%), radial-gradient(ellipse 60% 45% at 85% 25%, rgba(70,130,230,0.22), transparent 65%), radial-gradient(ellipse 65% 50% at 50% 100%, rgba(70,150,190,0.20), transparent 70%);
-    --section-glass: rgba(241,245,251,0.42);
+    --section-glass: rgba(226,231,241,0.42);
     --compare-highlight: rgba(42,111,219,0.16);
   }
   body {
