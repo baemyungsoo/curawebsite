@@ -129,6 +129,12 @@
     html { scroll-snap-type: none; }
     #glow1 > div, #glow2 > div, #glow3 > div { animation: none; }
   }
+  /* Features grid: like a switch forcing a fixed number of ports per row instead of auto-negotiating —
+     2 columns (so 4 rows of 2) on narrow screens, 4 columns (2 rows of 4) once there's enough width for cura's 8 feature cards. */
+  .features-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+  @media (min-width: 720px) {
+    .features-grid { grid-template-columns: repeat(4, 1fr); }
+  }
   /* FAQ accordion — native <details>/<summary>, themed to match cura's card/row system */
   details.faq-item { border: 1px solid var(--line); border-radius: 14px; background: var(--row); padding: 0 18px; transition: background-color 0.4s ease; }
   details.faq-item summary { cursor: pointer; padding: 16px 28px 16px 0; font-size: 15px; font-variation-settings: 'wght' 400; color: var(--text); list-style: none; position: relative; }
@@ -346,7 +352,7 @@
       <p style="margin: 0; font-size: 16px; color: var(--text-secondary);">Built around how families actually manage medications — together, not in a spreadsheet.</p>
     </div>
 
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px;">
+    <div class="features-grid">
 
       <!-- Card 1 -->
       <div style="background: var(--card); border: 1px solid var(--line); border-radius: 18px; padding: 24px; display: flex; flex-direction: column; gap: 12px;">
