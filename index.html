@@ -168,9 +168,9 @@
     <div style="display: flex; align-items: center; gap: clamp(12px, 3vw, 32px); flex-wrap: wrap;">
       <a href="#features" style="font-size: 14px; color: var(--text-secondary);">Features</a>
       <a href="#safety" style="font-size: 14px; color: var(--text-secondary);">Safety</a>
-      <a href="#reviews" style="font-size: 14px; color: var(--text-secondary);">Reviews</a>
       <a href="#family" style="font-size: 14px; color: var(--text-secondary);">Family</a>
       <a href="#rewards" style="font-size: 14px; color: var(--text-secondary);">Rewards</a>
+      <a href="#reviews" style="font-size: 14px; color: var(--text-secondary);">Reviews</a>
       <a href="#roadmap" style="font-size: 14px; color: var(--text-secondary);">Roadmap</a>
       <a href="#faq" style="font-size: 14px; color: var(--text-secondary);">FAQ</a>
       <button type="button" id="theme-toggle" aria-label="Switch to light mode" aria-pressed="false" style="display: flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 50%; border: 1px solid var(--line); background: var(--row); color: var(--text); cursor: pointer; padding: 0; flex-shrink: 0;">
@@ -323,8 +323,20 @@
     </div>
   </header>
 
-  <!-- ============== FEATURES ============== -->
   <main>
+  <!-- ============== ORIGIN STORY ============== -->
+  <section id="story" class="reveal" style="position: relative; z-index: 1; max-width: 760px; margin: 0 auto; padding: 72px clamp(20px, 5vw, 64px); text-align: center; display: flex; flex-direction: column; align-items: center; gap: 18px;">
+    <span style="font-size: 13px; color: var(--secondary); letter-spacing: 0.04em; text-transform: uppercase;">Why cura</span>
+    <h2 style="margin: 0; font-size: clamp(26px, 3.4vw, 34px); font-variation-settings: 'wght' 400; max-width: 520px;">Built from a kitchen-table problem</h2>
+    <p style="margin: 0; font-size: 16px; line-height: 1.7; color: var(--text-secondary); max-width: 600px;">
+      cura started the way a lot of real problems do — with a row of prescription bottles on a counter, each on its own frequency, and no easy way to tell at a glance what had been taken and what hadn't. Spreadsheets were too slow to update; paper got lost or out of date within a week.
+    </p>
+    <p style="margin: 0; font-size: 16px; line-height: 1.7; color: var(--text-secondary); max-width: 600px;">
+      cura was built to fix that for one household first — then shaped, alpha by alpha, into something other families managing multiple medications could rely on too.
+    </p>
+  </section>
+
+  <!-- ============== FEATURES ============== -->
   <section id="features" class="reveal" style="position: relative; z-index: 1; background: var(--section-glass); backdrop-filter: blur(22px); -webkit-backdrop-filter: blur(22px); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);">
     <div style="max-width: 1280px; margin: 0 auto; padding: 64px clamp(20px, 5vw, 64px);">
     <div style="max-width: 620px; margin: 0 auto 44px; text-align: center; display: flex; flex-direction: column; gap: 12px;">
@@ -411,6 +423,107 @@
     </div>
   </section>
 
+  <!-- ============== HOW IT WORKS ============== -->
+  <section id="how" class="reveal" style="position: relative; z-index: 1; max-width: 1280px; margin: 0 auto; padding: 72px clamp(20px, 5vw, 64px);">
+    <div style="max-width: 560px; margin: 0 auto 44px; text-align: center; display: flex; flex-direction: column; gap: 12px;">
+      <span style="font-size: 13px; color: var(--secondary); letter-spacing: 0.04em; text-transform: uppercase;">How it works</span>
+      <h2 style="margin: 0; font-size: clamp(26px, 3.4vw, 34px); font-variation-settings: 'wght' 400;">Set up once. cura's with you the whole way.</h2>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 24px;">
+      <div style="display: flex; flex-direction: column; gap: 10px;">
+        <span style="font-size: 34px; color: var(--accent); font-family: 'GoogleSansFlex', system-ui, sans-serif; font-variation-settings: 'wght' 400, 'wdth' 100, 'slnt' 0;">01</span>
+        <h3 style="margin: 0; font-size: 17px; font-variation-settings: 'wght' 400;">Add a family member</h3>
+        <p style="margin: 0; font-size: 14px; color: var(--text-secondary); line-height: 1.55;">Create a profile, pick a colour, and record any known allergies up front.</p>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 10px;">
+        <span style="font-size: 34px; color: var(--accent); font-family: 'GoogleSansFlex', system-ui, sans-serif; font-variation-settings: 'wght' 400, 'wdth' 100, 'slnt' 0;">02</span>
+        <h3 style="margin: 0; font-size: 17px; font-variation-settings: 'wght' 400;">Add a medication</h3>
+        <p style="margin: 0; font-size: 14px; color: var(--text-secondary); line-height: 1.55;">Type it in, or scan a clinic's QR code — dosage, frequency and times fill in for you.</p>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 10px;">
+        <span style="font-size: 34px; color: var(--accent); font-family: 'GoogleSansFlex', system-ui, sans-serif; font-variation-settings: 'wght' 400, 'wdth' 100, 'slnt' 0;">03</span>
+        <h3 style="margin: 0; font-size: 17px; font-variation-settings: 'wght' 400;">Safety checks run</h3>
+        <p style="margin: 0; font-size: 14px; color: var(--text-secondary); line-height: 1.55;">Allergies and drug-drug interactions (DDIs) are checked automatically, before the first dose is ever logged.</p>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 10px;">
+        <span style="font-size: 34px; color: var(--accent); font-family: 'GoogleSansFlex', system-ui, sans-serif; font-variation-settings: 'wght' 400, 'wdth' 100, 'slnt' 0;">04</span>
+        <h3 style="margin: 0; font-size: 17px; font-variation-settings: 'wght' 400;">Take, track, repeat</h3>
+        <p style="margin: 0; font-size: 14px; color: var(--text-secondary); line-height: 1.55;">Dose cards appear on schedule. One tap logs it, and the history builds itself.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== SAFETY ============== -->
+  <section id="safety" class="reveal" style="position: relative; z-index: 1; background: var(--section-glass); backdrop-filter: blur(22px); -webkit-backdrop-filter: blur(22px); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);">
+    <div style="max-width: 1280px; margin: 0 auto; padding: 72px clamp(20px, 5vw, 64px); display: flex; flex-wrap: wrap; gap: 48px; align-items: center;">
+      <div style="flex: 1 1 420px; min-width: 0; display: flex; flex-direction: column; gap: 16px;">
+        <span style="font-size: 13px; color: var(--secondary); letter-spacing: 0.04em; text-transform: uppercase;">Safety</span>
+        <h2 style="margin: 0; font-size: clamp(26px, 3.4vw, 34px); font-variation-settings: 'wght' 400;">A safety net behind every dose</h2>
+        <p style="margin: 0; font-size: 16px; line-height: 1.6; color: var(--text-secondary); max-width: 520px;">
+          cura cross-references Singapore's HSA drug registry against each family member's recorded allergies and existing medications before a dose is ever logged — and makes the result visible, not buried in a settings page.
+        </p>
+        <p style="margin: 0; font-size: 14px; line-height: 1.6; color: var(--text-secondary); max-width: 520px;">
+          cura is a careful companion, not a certified practitioner — it's built to catch common, well-established risks, and allows you to have a conversation with your qualified clinician for a final judgement.
+        </p>
+      </div>
+
+      <div style="flex: 1 1 360px; min-width: 300px; display: flex; flex-direction: column; gap: 14px;">
+
+        <div style="display: flex; align-items: flex-start; gap: 14px; background: var(--row); border: 1px solid var(--line); border-radius: 14px; padding: 16px;">
+          <span aria-hidden="true" style="width: 14px; height: 14px; border-radius: 50%; background: var(--warn-allergy); margin-top: 4px; flex-shrink: 0;"></span>
+          <div>
+            <div style="font-size: 15px; font-variation-settings: 'wght' 400;">Allergy conflict</div>
+            <div style="font-size: 13px; color: var(--text-secondary); line-height: 1.5;">Flags a medication that matches — or shares an active ingredient with — a recorded allergy.</div>
+          </div>
+        </div>
+
+        <div style="display: flex; align-items: flex-start; gap: 14px; background: var(--row); border: 1px solid var(--line); border-radius: 14px; padding: 16px;">
+          <span aria-hidden="true" style="width: 14px; height: 14px; border-radius: 50%; background: var(--warn-interaction); margin-top: 4px; flex-shrink: 0;"></span>
+          <div>
+            <div style="font-size: 15px; font-variation-settings: 'wght' 400;">Drug interaction</div>
+            <div style="font-size: 13px; color: var(--text-secondary); line-height: 1.5;">Warns when two active medications are a known-risk combination, down to minimum safe dose spacing.</div>
+          </div>
+        </div>
+
+        <div style="display: flex; align-items: flex-start; gap: 14px; background: var(--row); border: 1px solid var(--line); border-radius: 14px; padding: 16px;">
+          <span aria-hidden="true" style="width: 14px; height: 14px; border-radius: 50%; background: var(--warn-duplicate); margin-top: 4px; flex-shrink: 0;"></span>
+          <div>
+            <div style="font-size: 15px; font-variation-settings: 'wght' 400;">Duplicate medication</div>
+            <div style="font-size: 13px; color: var(--text-secondary); line-height: 1.5;">Catches the same medicine, or drug class, added twice under two different brand names.</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== FAMILY ============== -->
+  <section id="family" class="reveal" style="position: relative; z-index: 1; background: var(--section-glass); backdrop-filter: blur(22px); -webkit-backdrop-filter: blur(22px); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);">
+    <div style="max-width: 1280px; margin: 0 auto; padding: 72px clamp(20px, 5vw, 64px); display: flex; flex-wrap: wrap-reverse; gap: 48px; align-items: center;">
+
+      <div style="flex: 1 1 360px; min-width: 300px; display: flex; justify-content: center;">
+        <div style="display: flex; align-items: center;">
+          <img src="assets/images/avatar-female-01.png" alt="A family member avatar" style="width: 72px; height: 72px; border-radius: 50%; border: 3px solid var(--card); background: var(--glow-indigo); object-fit: cover; margin-right: -18px; position: relative; z-index: 4;">
+          <span style="display: flex; align-items: center; justify-content: center; width: 72px; height: 72px; border-radius: 50%; border: 3px solid var(--self-ring); background: var(--accent-container); color: var(--accent); font-size: 22px; font-variation-settings: 'wght' 400; margin-right: -18px; position: relative; z-index: 3;">J</span>
+          <img src="assets/images/avatar-male-01.png" alt="A family member avatar" style="width: 72px; height: 72px; border-radius: 50%; border: 3px solid var(--card); background: var(--glow-blue); object-fit: cover; margin-right: -18px; position: relative; z-index: 2;">
+          <span style="display: flex; align-items: center; justify-content: center; width: 72px; height: 72px; border-radius: 50%; border: 3px solid var(--card); background: var(--glow-teal); color: var(--text); font-size: 22px; font-variation-settings: 'wght' 400; position: relative; z-index: 1;">A</span>
+        </div>
+      </div>
+
+      <div style="flex: 1 1 420px; min-width: 0; display: flex; flex-direction: column; gap: 16px;">
+        <span style="font-size: 13px; color: var(--secondary); letter-spacing: 0.04em; text-transform: uppercase;">Family</span>
+        <h2 style="margin: 0; font-size: clamp(26px, 3.4vw, 34px); font-variation-settings: 'wght' 400;">Built for the whole household</h2>
+        <p style="margin: 0; font-size: 16px; line-height: 1.6; color: var(--text-secondary); max-width: 480px;">
+          Switch between family members in one tap. Each person keeps their own colour, avatar, allergies and dose history — so cura never mixes up who took what.
+        </p>
+        <p style="margin: 0; font-size: 14px; line-height: 1.6; color: var(--text-secondary); max-width: 480px;">
+          Add a secondary caregiver — a partner, an adult child, a part-time helper — so more than one person can see and manage the same schedule, without duplicate entries or crossed wires about who did what.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
   <!-- ============== COMPARISON ============== -->
   <section id="compare" class="reveal" style="position: relative; z-index: 1; max-width: 1024px; margin: 0 auto; padding: 64px clamp(20px, 5vw, 64px);">
     <div style="max-width: 580px; margin: 0 auto 36px; text-align: center; display: flex; flex-direction: column; gap: 12px;">
@@ -460,119 +573,6 @@
 
       </div>
     </div>
-  </section>
-
-  <!-- ============== SAFETY ============== -->
-  <section id="safety" class="reveal" style="position: relative; z-index: 1; background: var(--section-glass); backdrop-filter: blur(22px); -webkit-backdrop-filter: blur(22px); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);">
-    <div style="max-width: 1280px; margin: 0 auto; padding: 72px clamp(20px, 5vw, 64px); display: flex; flex-wrap: wrap; gap: 48px; align-items: center;">
-      <div style="flex: 1 1 420px; min-width: 0; display: flex; flex-direction: column; gap: 16px;">
-        <span style="font-size: 13px; color: var(--secondary); letter-spacing: 0.04em; text-transform: uppercase;">Safety</span>
-        <h2 style="margin: 0; font-size: clamp(26px, 3.4vw, 34px); font-variation-settings: 'wght' 400;">A safety net behind every dose</h2>
-        <p style="margin: 0; font-size: 16px; line-height: 1.6; color: var(--text-secondary); max-width: 520px;">
-          cura cross-references Singapore's HSA drug registry against each family member's recorded allergies and existing medications before a dose is ever logged — and makes the result visible, not buried in a settings page.
-        </p>
-        <p style="margin: 0; font-size: 14px; line-height: 1.6; color: var(--text-secondary); max-width: 520px;">
-          cura is a careful companion, not a certified practitioner — it's built to catch common, well-established risks, and allows you to have a conversation with your qualified clinician for a final judgement.
-        </p>
-      </div>
-
-      <div style="flex: 1 1 360px; min-width: 300px; display: flex; flex-direction: column; gap: 14px;">
-
-        <div style="display: flex; align-items: flex-start; gap: 14px; background: var(--row); border: 1px solid var(--line); border-radius: 14px; padding: 16px;">
-          <span aria-hidden="true" style="width: 14px; height: 14px; border-radius: 50%; background: var(--warn-allergy); margin-top: 4px; flex-shrink: 0;"></span>
-          <div>
-            <div style="font-size: 15px; font-variation-settings: 'wght' 400;">Allergy conflict</div>
-            <div style="font-size: 13px; color: var(--text-secondary); line-height: 1.5;">Flags a medication that matches — or shares an active ingredient with — a recorded allergy.</div>
-          </div>
-        </div>
-
-        <div style="display: flex; align-items: flex-start; gap: 14px; background: var(--row); border: 1px solid var(--line); border-radius: 14px; padding: 16px;">
-          <span aria-hidden="true" style="width: 14px; height: 14px; border-radius: 50%; background: var(--warn-interaction); margin-top: 4px; flex-shrink: 0;"></span>
-          <div>
-            <div style="font-size: 15px; font-variation-settings: 'wght' 400;">Drug interaction</div>
-            <div style="font-size: 13px; color: var(--text-secondary); line-height: 1.5;">Warns when two active medications are a known-risk combination, down to minimum safe dose spacing.</div>
-          </div>
-        </div>
-
-        <div style="display: flex; align-items: flex-start; gap: 14px; background: var(--row); border: 1px solid var(--line); border-radius: 14px; padding: 16px;">
-          <span aria-hidden="true" style="width: 14px; height: 14px; border-radius: 50%; background: var(--warn-duplicate); margin-top: 4px; flex-shrink: 0;"></span>
-          <div>
-            <div style="font-size: 15px; font-variation-settings: 'wght' 400;">Duplicate medication</div>
-            <div style="font-size: 13px; color: var(--text-secondary); line-height: 1.5;">Catches the same medicine, or drug class, added twice under two different brand names.</div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ============== HOW IT WORKS ============== -->
-  <section id="how" class="reveal" style="position: relative; z-index: 1; max-width: 1280px; margin: 0 auto; padding: 72px clamp(20px, 5vw, 64px);">
-    <div style="max-width: 560px; margin: 0 auto 44px; text-align: center; display: flex; flex-direction: column; gap: 12px;">
-      <span style="font-size: 13px; color: var(--secondary); letter-spacing: 0.04em; text-transform: uppercase;">How it works</span>
-      <h2 style="margin: 0; font-size: clamp(26px, 3.4vw, 34px); font-variation-settings: 'wght' 400;">Set up once. cura's with you the whole way.</h2>
-    </div>
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 24px;">
-      <div style="display: flex; flex-direction: column; gap: 10px;">
-        <span style="font-size: 34px; color: var(--accent); font-family: 'GoogleSansFlex', system-ui, sans-serif; font-variation-settings: 'wght' 400, 'wdth' 100, 'slnt' 0;">01</span>
-        <h3 style="margin: 0; font-size: 17px; font-variation-settings: 'wght' 400;">Add a family member</h3>
-        <p style="margin: 0; font-size: 14px; color: var(--text-secondary); line-height: 1.55;">Create a profile, pick a colour, and record any known allergies up front.</p>
-      </div>
-      <div style="display: flex; flex-direction: column; gap: 10px;">
-        <span style="font-size: 34px; color: var(--accent); font-family: 'GoogleSansFlex', system-ui, sans-serif; font-variation-settings: 'wght' 400, 'wdth' 100, 'slnt' 0;">02</span>
-        <h3 style="margin: 0; font-size: 17px; font-variation-settings: 'wght' 400;">Add a medication</h3>
-        <p style="margin: 0; font-size: 14px; color: var(--text-secondary); line-height: 1.55;">Type it in, or scan a clinic's QR code — dosage, frequency and times fill in for you.</p>
-      </div>
-      <div style="display: flex; flex-direction: column; gap: 10px;">
-        <span style="font-size: 34px; color: var(--accent); font-family: 'GoogleSansFlex', system-ui, sans-serif; font-variation-settings: 'wght' 400, 'wdth' 100, 'slnt' 0;">03</span>
-        <h3 style="margin: 0; font-size: 17px; font-variation-settings: 'wght' 400;">Safety checks run</h3>
-        <p style="margin: 0; font-size: 14px; color: var(--text-secondary); line-height: 1.55;">Allergies and drug-drug interactions (DDIs) are checked automatically, before the first dose is ever logged.</p>
-      </div>
-      <div style="display: flex; flex-direction: column; gap: 10px;">
-        <span style="font-size: 34px; color: var(--accent); font-family: 'GoogleSansFlex', system-ui, sans-serif; font-variation-settings: 'wght' 400, 'wdth' 100, 'slnt' 0;">04</span>
-        <h3 style="margin: 0; font-size: 17px; font-variation-settings: 'wght' 400;">Take, track, repeat</h3>
-        <p style="margin: 0; font-size: 14px; color: var(--text-secondary); line-height: 1.55;">Dose cards appear on schedule. One tap logs it, and the history builds itself.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============== FAMILY ============== -->
-  <section id="family" class="reveal" style="position: relative; z-index: 1; background: var(--section-glass); backdrop-filter: blur(22px); -webkit-backdrop-filter: blur(22px); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);">
-    <div style="max-width: 1280px; margin: 0 auto; padding: 72px clamp(20px, 5vw, 64px); display: flex; flex-wrap: wrap-reverse; gap: 48px; align-items: center;">
-
-      <div style="flex: 1 1 360px; min-width: 300px; display: flex; justify-content: center;">
-        <div style="display: flex; align-items: center;">
-          <img src="assets/images/avatar-female-01.png" alt="A family member avatar" style="width: 72px; height: 72px; border-radius: 50%; border: 3px solid var(--card); background: var(--glow-indigo); object-fit: cover; margin-right: -18px; position: relative; z-index: 4;">
-          <span style="display: flex; align-items: center; justify-content: center; width: 72px; height: 72px; border-radius: 50%; border: 3px solid var(--self-ring); background: var(--accent-container); color: var(--accent); font-size: 22px; font-variation-settings: 'wght' 400; margin-right: -18px; position: relative; z-index: 3;">J</span>
-          <img src="assets/images/avatar-male-01.png" alt="A family member avatar" style="width: 72px; height: 72px; border-radius: 50%; border: 3px solid var(--card); background: var(--glow-blue); object-fit: cover; margin-right: -18px; position: relative; z-index: 2;">
-          <span style="display: flex; align-items: center; justify-content: center; width: 72px; height: 72px; border-radius: 50%; border: 3px solid var(--card); background: var(--glow-teal); color: var(--text); font-size: 22px; font-variation-settings: 'wght' 400; position: relative; z-index: 1;">A</span>
-        </div>
-      </div>
-
-      <div style="flex: 1 1 420px; min-width: 0; display: flex; flex-direction: column; gap: 16px;">
-        <span style="font-size: 13px; color: var(--secondary); letter-spacing: 0.04em; text-transform: uppercase;">Family</span>
-        <h2 style="margin: 0; font-size: clamp(26px, 3.4vw, 34px); font-variation-settings: 'wght' 400;">Built for the whole household</h2>
-        <p style="margin: 0; font-size: 16px; line-height: 1.6; color: var(--text-secondary); max-width: 480px;">
-          Switch between family members in one tap. Each person keeps their own colour, avatar, allergies and dose history — so cura never mixes up who took what.
-        </p>
-        <p style="margin: 0; font-size: 14px; line-height: 1.6; color: var(--text-secondary); max-width: 480px;">
-          Add a secondary caregiver — a partner, an adult child, a part-time helper — so more than one person can see and manage the same schedule, without duplicate entries or crossed wires about who did what.
-        </p>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ============== ORIGIN STORY ============== -->
-  <section id="story" class="reveal" style="position: relative; z-index: 1; max-width: 760px; margin: 0 auto; padding: 72px clamp(20px, 5vw, 64px); text-align: center; display: flex; flex-direction: column; align-items: center; gap: 18px;">
-    <span style="font-size: 13px; color: var(--secondary); letter-spacing: 0.04em; text-transform: uppercase;">Why cura</span>
-    <h2 style="margin: 0; font-size: clamp(26px, 3.4vw, 34px); font-variation-settings: 'wght' 400; max-width: 520px;">Built from a kitchen-table problem</h2>
-    <p style="margin: 0; font-size: 16px; line-height: 1.7; color: var(--text-secondary); max-width: 600px;">
-      cura started the way a lot of real problems do — with a row of prescription bottles on a counter, each on its own frequency, and no easy way to tell at a glance what had been taken and what hadn't. Spreadsheets were too slow to update; paper got lost or out of date within a week.
-    </p>
-    <p style="margin: 0; font-size: 16px; line-height: 1.7; color: var(--text-secondary); max-width: 600px;">
-      cura was built to fix that for one household first — then shaped, alpha by alpha, into something other families managing multiple medications could rely on too.
-    </p>
   </section>
 
   <!-- ============== RWE / REWARDS ============== -->
