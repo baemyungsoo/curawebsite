@@ -99,10 +99,24 @@
   /* Form controls don't inherit the page font by default in most browsers —
      this makes every button/input/select on the page use GoogleSansFlex too. */
   button, input, select, textarea { font-family: inherit; }
-  @keyframes drift {
-    0%   { transform: translate(0, 0); }
-    50%  { transform: translate(18px, -24px); }
-    100% { transform: translate(0, 0); }
+  @keyframes drift1 {
+    0%   { transform: translate(0, 0) scale(1); }
+    25%  { transform: translate(50px, -70px) scale(1.06); }
+    50%  { transform: translate(-30px, -40px) scale(0.95); }
+    75%  { transform: translate(-60px, 50px) scale(1.03); }
+    100% { transform: translate(0, 0) scale(1); }
+  }
+  @keyframes drift2 {
+    0%   { transform: translate(0, 0) scale(1); }
+    33%  { transform: translate(-55px, 45px) scale(1.05); }
+    66%  { transform: translate(40px, 65px) scale(0.94); }
+    100% { transform: translate(0, 0) scale(1); }
+  }
+  @keyframes drift3 {
+    0%   { transform: translate(0, 0) scale(1); }
+    40%  { transform: translate(65px, -45px) scale(1.07); }
+    70%  { transform: translate(-45px, -60px) scale(0.93); }
+    100% { transform: translate(0, 0) scale(1); }
   }
   /* Section-to-section scroll snap: scrolling settles on the next section instead of stopping mid-way */
   html { scroll-snap-type: y proximity; }
@@ -113,6 +127,7 @@
   @media (prefers-reduced-motion: reduce) {
     .reveal { opacity: 1; transform: none; transition: none; }
     html { scroll-snap-type: none; }
+    #glow1 > div, #glow2 > div, #glow3 > div { animation: none; }
   }
   /* FAQ accordion — native <details>/<summary>, themed to match cura's card/row system */
   details.faq-item { border: 1px solid var(--line); border-radius: 14px; background: var(--row); padding: 0 18px; transition: background-color 0.4s ease; }
@@ -134,13 +149,13 @@
 
   <!-- ============== BACKDROP GLOW LAYER (fixed to the viewport, then nudged by a gentle scroll-parallax transform) ============== -->
   <div id="glow1" aria-hidden="true" style="position: fixed; top: -14vh; right: -10vw; pointer-events: none; z-index: 0; transition: transform 0.9s cubic-bezier(0.22,1,0.36,1);">
-    <div style="width: 620px; height: 620px; border-radius: 50%; background: radial-gradient(circle, #4C8EFE66 0%, transparent 70%); filter: blur(10px); animation: drift 14s ease-in-out infinite;"></div>
+    <div style="width: 620px; height: 620px; border-radius: 50%; background: radial-gradient(circle, #4C8EFE66 0%, transparent 70%); filter: blur(10px); animation: drift1 22s ease-in-out infinite;"></div>
   </div>
   <div id="glow2" aria-hidden="true" style="position: fixed; bottom: -16vh; left: -10vw; pointer-events: none; z-index: 0; transition: transform 0.9s cubic-bezier(0.22,1,0.36,1);">
-    <div style="width: 520px; height: 520px; border-radius: 50%; background: radial-gradient(circle, var(--glow-teal) 0%, transparent 70%); filter: blur(10px); opacity: 0.55; animation: drift 18s ease-in-out infinite reverse;"></div>
+    <div style="width: 520px; height: 520px; border-radius: 50%; background: radial-gradient(circle, var(--glow-teal) 0%, transparent 70%); filter: blur(10px); opacity: 0.55; animation: drift2 27s ease-in-out infinite;"></div>
   </div>
   <div id="glow3" aria-hidden="true" style="position: fixed; top: 34vh; left: 42vw; pointer-events: none; z-index: 0; transition: transform 0.9s cubic-bezier(0.22,1,0.36,1);">
-    <div style="width: 420px; height: 420px; border-radius: 50%; background: radial-gradient(circle, var(--glow-indigo) 0%, transparent 70%); filter: blur(10px); opacity: 0.4;"></div>
+    <div style="width: 420px; height: 420px; border-radius: 50%; background: radial-gradient(circle, var(--glow-indigo) 0%, transparent 70%); filter: blur(10px); opacity: 0.4; animation: drift3 19s ease-in-out infinite;"></div>
   </div>
 
   <!-- ============== NAV ============== -->
